@@ -174,7 +174,9 @@ void pdfparser::transformation(std::vector<uint8_t>& decompressed_data, size_t s
             point.setX(stack.top());
             stack.pop();
             drawingcommands.push_back(new Line{LineTo, point});
-            //qDebug() << point << " " << ((char)*iter);
+        }else if (*iter == 'q' && *(iter - 1) == ' ')
+        {
+            drawingcommands.push_back(new Quit{QuitTo});
         }
         if (iter != end) ++iter;
     }

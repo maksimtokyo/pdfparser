@@ -7,12 +7,12 @@ int main() {
     pdfparser parser;
     parser.readfiles({
         // "test1.pdf",
-        // "test2.pdf",
-        // "test3.pdf",
-        // "test4.pdf",
+        "test2.pdf",
+        "test3.pdf",
+        "test4.pdf",
         //  "test5.pdf",
         // "test6.pdf",
-        "test7.pdf"
+       //  "test7.pdf"
     });
 
     parser.print();
